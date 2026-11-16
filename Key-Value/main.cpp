@@ -2,7 +2,7 @@
 #include "store.hpp"
 
 int main() {
-    // Створюємо сховище максимум на 3 елементи для перевірки LRU
+    //create a storage with a maximum capacity of 3 elements to test LRU.
     KeyValueStore kv(3);
 
     std::cout << "=== Test KV Store ===" << std::endl;
@@ -11,13 +11,13 @@ int main() {
     kv.set("node_2", "humidity_45%");
     kv.set("node_3", "status_active");
 
-    // Перевіримо отримання існуючого ключа
+    //verify the retrieval of an existing key.
     auto val = kv.get("node_1");
     if (val) {
         std::cout << "Get node_1: " << *val << std::endl;
     }
 
-    // Додаємо 4-й елемент. Оскільки ліміт 3, "node_2" має бути витіснений (як найдавніше використаний)
+    //Adding the 4th element. Since the limit is 3, "node_2" must be evicted (as the least recently used).
     std::cout << "\nAdding node_4 (exceeding capacity)..." << std::endl;
     kv.set("node_4", "battery_98%");
 
