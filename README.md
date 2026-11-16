@@ -1,7 +1,6 @@
 # In-Memory LRU Key-Value Store
 
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 A lightweight, fast in-memory Key-Value storage engine written in modern C++ (C++17) featuring an **LRU (Least Recently Used)** cache eviction policy.
 
@@ -88,5 +87,6 @@ int main() {
 ├── Key-Value.sln      # Visual Studio solution file
 └── README.md
 ```
-##👨‍💻 Author
+## 👨‍💻 Author
+
 Developed by Oleh Boiko as a practical embedded systems C++ pet project.
