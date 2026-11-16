@@ -21,10 +21,10 @@ public:
 private:
     size_t max_capacity_;
 
-    // Список для збереження порядку використання (LRU)
+    // List to maintain the order of usage for LRU eviction policy
     using ListIt = std::list<std::pair<std::string, std::string>>::iterator;
     std::list<std::pair<std::string, std::string>> items_list_;
 
-    // Хеш-таблиця для швидкого доступу O(1) за ітератором списку
+    // Hash map for O(1) fast lookup pointing to list iterators
     std::unordered_map<std::string, ListIt> index_map_;
 };
